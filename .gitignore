@@ -1,0 +1,23 @@
+# Archivos temporales
+*.bak
+*.tmp
+*.log
+
+# Salidas compiladas
+*.exe
+*.obj
+
+# Configuración local sensible
+.env
+.env.*
+# DataFlex Studio
+*.lock
+IdeSrc/Workspace.loc
+*.dfcache.json
+# Temporales
+*.bak
+*.tmp
+*.log
+# Credenciales
+.env
+.env.*
