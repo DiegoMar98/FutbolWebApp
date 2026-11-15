@@ -41,20 +41,20 @@ Object oDashboard is a cWebView
             Set psCSSClass to "Tile Light"
             Set pbServerOnClick to True
 
-    Set psHtml to ('<div class="WebCon_Sizer" ' + ;
-        'data-ServerOnClick="liga" ' + ;
-        'data-OnClickParam="openview">' + ;
-        '<div class="Tile_Title">Ligas</div>' + ;
-        '<div class="Tile_Subtitle">Gestion de competiciones</div>' + ;
-        '</div>')
+            Set psHtml to ('<div class="WebCon_Sizer" ' + ;
+                'data-ServerOnClick="liga" ' + ;
+                'data-OnClickParam="openview">' + ;
+                '<div class="Tile_Title">Ligas</div>' + ;
+                '<div class="Tile_Subtitle">Gestion de competiciones</div>' + ;
+                '</div>')
 
-    WebRegisterPath ntNavigateForwardCustom oSelectLiga
+            WebRegisterPath ntNavigateForwardCustom oSelectLiga
 
-    Procedure OnClick String sId String sParam
-        Send NavigatePath
-    End_Procedure
+            Procedure OnClick String sId String sParam
+                Send NavigatePath
+            End_Procedure
 
-End_Object
+        End_Object
 
             // ==================================
             // TARJETA 2 - EQUIPOS
@@ -119,12 +119,20 @@ End_Object
                 Set piColumnSpan to 6
                 Set piColumnIndex to 0
                 Set psCSSClass to "Tile Light"
+                Set pbServerOnClick to True
 
-                Set psHtml to ('<div class="WebCon_Sizer">' + ;
-                    '<div class="Tile_Title">Posiciones</div>' + ;
-                    '<div class="Tile_Subtitle">' + ;
-                    'Posiciones de juego' + ;
-                    '</div></div>')
+                Set psHtml to ('<div class="WebCon_Sizer" ' + ;
+                'data-ServerOnClick="posiciones" ' + ;
+                'data-OnClickParam="openview">' + ;
+                '<div class="Tile_Title">Posiciones</div>' + ;
+                '<div class="Tile_Subtitle">Gestion de posiciones</div>' + ;
+                '</div>')
+                    
+                WebRegisterPath ntNavigateForwardCustom oSelectPosicion
+
+                Procedure OnClick String sId String sParam
+                    Send NavigatePath
+                End_Procedure
 
             End_Object
 
