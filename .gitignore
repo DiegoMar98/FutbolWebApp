@@ -21,3 +21,18 @@ IdeSrc/Workspace.loc
 # Credenciales
 .env
 .env.*
+# DataFlex - archivos generados durante compilacion
+*.x64.dep
+*.x64.prn
+*.x64.cch
+*.dbg
+
+# DataFlex Studio - configuracion local
+IdeSrc/*_Studio.dsk
+IdeSrc/StudioMetaData64.mtd
+
+# Datos locales de ejecucion
+Data/WebAppSession.dat
+Data/WebAppServerProps.dat
+Data/webappsession.k*
+Data/webappserverprops.k*
