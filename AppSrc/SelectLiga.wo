@@ -32,9 +32,9 @@ Object oSelectLiga is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to False
         Set pbFillHeight to True
+        Set pbColumnSortable to False
         Set pbShowHeader to True
         Set piSortColumn to 0
-        Set pbColumnSortable to False
 
         Object oligaID is a cWebColumn
             Entry_Item liga.ID
