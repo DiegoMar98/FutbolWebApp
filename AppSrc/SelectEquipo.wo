@@ -35,7 +35,7 @@ Object oSelectEquipo is a cWebView
     Object oList is a cWebList
         Set piColumnSpan to 0
         Set psCSSClass to "MobileList"
-        Set pbServerOnRowClick to False
+        Set pbServerOnRowClick to True
         Set pbFillHeight to True
         Set pbShowHeader to True
         Set piSortColumn to 0
