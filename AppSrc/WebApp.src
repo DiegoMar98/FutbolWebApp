@@ -79,9 +79,20 @@ Object oWebApp is a cWebApp
                     End_Object
 
                     Object oSelectEntrenadorItem1 is a cWebMenuItem
-                        Set psCaption to "SelectEntrenador"
+                        Set psCaption to "Entrenadores"
 
                         WebRegisterPath ntNavigateBegin oSelectEntrenador
+
+                        Procedure OnClick
+                            Forward Send OnClick
+                                Send NavigatePath
+                        End_Procedure
+                    End_Object
+
+                    Object oSelectJugadorItem1 is a cWebMenuItem
+                        Set psCaption to "Jugadores"
+
+                        WebRegisterPath ntNavigateBegin oSelectJugador
 
                         Procedure OnClick
                             Forward Send OnClick
@@ -177,6 +188,8 @@ Object oWebApp is a cWebApp
     Use SelectEquipo.wo
     Use ZoomEntrenador.wo
     Use SelectEntrenador.wo
+    Use ZoomJugador.wo
+    Use SelectJugador.wo
     Set phoDefaultView to oDashboard
     
     // Hide the header panel for users that are not logged in.
