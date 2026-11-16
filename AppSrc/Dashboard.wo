@@ -169,12 +169,21 @@ Object oDashboard is a cWebView
                 Set piColumnSpan to 6
                 Set piColumnIndex to 6
                 Set psCSSClass to "Tile LightAlternate"
+                Set pbServerOnClick to True
 
-                Set psHtml to ('<div class="WebCon_Sizer">' + ;
+                Set psHtml to ('<div class="WebCon_Sizer" ' + ;
+                    'data-ServerOnClick="posiciones" ' + ;
+                    'data-OnClickParam="openview">' + ;
                     '<div class="Tile_Title">Jugador - Posicion</div>' + ;
                     '<div class="Tile_Subtitle">' + ;
                     'Asignacion de posiciones' + ;
                     '</div></div>')
+                    
+                WebRegisterPath ntNavigateForwardCustom oSelectJugadorPosicion
+
+                Procedure OnClick String sId String sParam
+                    Send NavigatePath
+                End_Procedure
 
             End_Object
 
