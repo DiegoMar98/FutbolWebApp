@@ -45,7 +45,6 @@ Object oZoomLiga is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Nombre"
-            Set pbReadOnly to True
         End_Object 
 
         Object oligaPais is a cWebForm
@@ -54,7 +53,6 @@ Object oZoomLiga is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Pais"
-            Set pbReadOnly to True
         End_Object 
 
         Object oligaEquipos is a cWebForm
@@ -63,20 +61,37 @@ Object oZoomLiga is a cWebView
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Equipos"
-            Set pbReadOnly to True
         End_Object 
 
+        
         Object oligaEquiposMax is a cWebForm
             Entry_Item liga.EquiposMax
             Set piColumnSpan to 2
             Set piColumnIndex to 0
             Set peLabelPosition to lpTop
             Set psLabel to "Máximo de equipos"
-            Set pbReadOnly to True
-        End_Object 
-    End_Object 
+        End_Object
+        
+        // ==================================
+        // SPRINT 2 - FROM PARENT
+        // ==================================
+
+        Object oVerEquipos is a cWebButton
+            Set psCaption to "Ver equipos"
+            Set piColumnSpan to 12
+            Set piColumnIndex to 0
+
+            WebRegisterPath ntNavigateForward oSelectEquipo
+
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+
+    End_Object // Cierra oWebMainPanel
 
     Object oActionGroup is a cWebMenuGroup
+
 
         Object oSaveBtn is a cWebMenuItem
             Set psCSSClass to "WebSaveMenuItem"
